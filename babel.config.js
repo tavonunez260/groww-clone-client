@@ -17,13 +17,14 @@ module.exports = function (api) {
 			}
 		],
 		['@babel/plugin-transform-private-methods', { loose: true }],
-		['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+		['@babel/plugin-transform-private-property-in-object', { loose: true }],
 		['@babel/plugin-transform-class-properties', { loose: true }]
 	];
 
 	return {
 		presets: [
 			'module:metro-react-native-babel-preset',
+			'module:@react-native/babel-preset',
 			'@babel/preset-react',
 			'@babel/preset-typescript'
 		],
