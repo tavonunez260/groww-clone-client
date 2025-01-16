@@ -1,6 +1,6 @@
+import { useTheme } from '@context';
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
-import { useTheme } from '@context';
 
 export const HomeScreen = () => {
 	const { colorsState, setTheme } = useTheme();
@@ -23,19 +23,19 @@ export const HomeScreen = () => {
 };
 
 const styles = StyleSheet.create({
+	buttonContainer: {
+		marginTop: 20,
+		paddingHorizontal: 20,
+		width: '100%'
+	},
 	container: {
+		alignItems: 'center',
 		flex: 1,
 		justifyContent: 'center',
-		alignItems: 'center',
-		padding: 20,
+		padding: 20
 	},
 	text: {
 		fontSize: 18,
-		fontWeight: 'bold',
-	},
-	buttonContainer: {
-		marginTop: 20,
-		width: '100%',
-		paddingHorizontal: 20,
-	},
+		fontWeight: 'bold'
+	}
 });
