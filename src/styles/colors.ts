@@ -1,0 +1,21 @@
+export const colors = {
+	themeColor: '#00D09C',
+	darkBackground: '#121212',
+	darkBackgroundLight: '#252525',
+	darkText: '#FCFCFC',
+	darkTextLight: '#FCFCFC',
+	darkBorder: '#484C56',
+	darkCard: '#292929',
+	activeTab: '#808EEE',
+	inactiveTab: '#7C7D8B',
+	notiCardDark: '#1b1b1b',
+	notiCardLight: '#f8f8f8',
+	lightCard: '#F9F9F9',
+	lightBackground: '#FFFFFF',
+	lightSubBackground: '#F8F8F8',
+	lightBorder: '#ccc',
+	lightText: '#454545',
+	profit: '#0ABB93',
+	loss: '#D55538',
+	errorColor: '#eb5b3c'
+}

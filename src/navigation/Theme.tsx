@@ -1,6 +1,6 @@
 import { useColorScheme } from 'react-native';
 
-import { Colors } from '@constants';
+import { colors } from '@styles';
 
 interface ThemeColors {
 	background: string;
@@ -19,24 +19,24 @@ interface Theme {
 export const lightTheme: Theme = {
 	dark: false,
 	colors: {
-		background: Colors.light_background,
-		border: Colors.light_border,
-		card: Colors.light_card,
-		notification: Colors.noti_card_light,
-		primary: Colors.themeColor,
-		text: Colors.light_text
+		background: colors.lightBackground,
+		border: colors.lightBorder,
+		card: colors.lightCard,
+		notification: colors.notiCardLight,
+		primary: colors.themeColor,
+		text: colors.lightText
 	}
 };
 
 export const darkTheme: Theme = {
 	dark: true,
 	colors: {
-		background: Colors.dark_background,
-		border: Colors.dark_border,
-		card: Colors.dark_card,
-		notification: Colors.noti_card_dark,
-		primary: Colors.themeColor,
-		text: Colors.dark_text
+		background: colors.darkBackground,
+		border: colors.darkBorder,
+		card: colors.darkCard,
+		notification: colors.notiCardDark,
+		primary: colors.themeColor,
+		text: colors.darkText
 	}
 };
 

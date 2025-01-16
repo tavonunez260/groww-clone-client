@@ -6,12 +6,15 @@
     "types": ["jest"],
     "baseUrl": "./",
     "paths": {
-      "@constants": ["src/constants"],
+      "@assets/*": ["src/assets/*"],
       "@components": ["src/components"],
+      "@constants": ["src/constants"],
+      "@context": ["src/context"],
       "@navigation": ["src/navigation"],
       "@screens": ["src/screens"],
+      "@store": ["src/store"],
+      "@styles": ["src/styles"],
       "@utils": ["src/utils"],
-      "@assets": ["src/assets"],
     }
   }
 }
