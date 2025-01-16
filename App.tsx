@@ -1,21 +1,21 @@
+import { ThemeProvider } from '@context';
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 
 import { Navigation } from '@navigation';
-import { TypographyProvider } from 'src/context/TypographyProvider';
 
 export default function App() {
 	return (
-		<SafeAreaView style={styles.container}>
-			<TypographyProvider>
+		<ThemeProvider>
+			<SafeAreaView style={styles.container}>
 				<Navigation />
-			</TypographyProvider>
-		</SafeAreaView>
+			</SafeAreaView>
+		</ThemeProvider>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-	},
+		flex: 1
+	}
 });
