@@ -1,46 +1,33 @@
 import { useColorScheme } from 'react-native';
 
 import { colors } from '@styles';
+import { ThemeType } from '@types';
 
-interface ThemeColors {
-	background: string;
-	border: string;
-	card: string;
-	notification: string;
-	text: string;
-	primary: string;
-}
-
-interface Theme {
-	dark: boolean;
-	colors: ThemeColors;
-}
-
-export const lightTheme: Theme = {
+export const lightTheme: ThemeType = {
 	dark: false,
 	colors: {
-		background: colors.lightBackground,
-		border: colors.lightBorder,
-		card: colors.lightCard,
-		notification: colors.notiCardLight,
+		background: colors.light.background,
+		border: colors.light.border,
+		card: colors.light.card,
+		notification: colors.light.notification,
 		primary: colors.themeColor,
-		text: colors.lightText
+		text: colors.light.text
 	}
 };
 
-export const darkTheme: Theme = {
+export const darkTheme: ThemeType = {
 	dark: true,
 	colors: {
-		background: colors.darkBackground,
-		border: colors.darkBorder,
-		card: colors.darkCard,
-		notification: colors.notiCardDark,
+		background: colors.dark.background,
+		border: colors.dark.border,
+		card: colors.dark.card,
+		notification: colors.dark.notification,
 		primary: colors.themeColor,
-		text: colors.darkText
+		text: colors.dark.text
 	}
 };
 
-export const useCustomTheme = (): Theme => {
+export const useCustomTheme = (): ThemeType => {
 	const scheme = useColorScheme();
 	return scheme === 'dark' ? darkTheme : lightTheme;
 };

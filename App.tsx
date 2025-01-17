@@ -1,16 +1,20 @@
 import { ThemeProvider } from '@context';
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { Navigation } from '@navigation';
 
 export default function App() {
 	return (
-		<ThemeProvider>
-			<SafeAreaView style={styles.container}>
-				<Navigation />
-			</SafeAreaView>
-		</ThemeProvider>
+		<GestureHandlerRootView>
+			<SafeAreaProvider>
+				<ThemeProvider>
+					<Navigation />
+				</ThemeProvider>
+			</SafeAreaProvider>
+		</GestureHandlerRootView>
 	);
 }
 

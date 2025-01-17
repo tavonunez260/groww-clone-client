@@ -44,7 +44,6 @@
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"],
 		"comma-dangle": ["error", "never"],
-		"indent": ["error", "tab"],
 		"import/order": [
 			"error",
 			{
@@ -52,7 +51,8 @@
 				"newlines-between": "always",
 				"alphabetize": { "order": "asc", "caseInsensitive": true }
 			}
-		]
+		],
+		"react-native/no-raw-text": "off"
 	},
 	"settings": {
 		"import/resolver": {

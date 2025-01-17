@@ -1,9 +1,10 @@
 export interface ThemeColors {
+	primary?: string;
 	background?: string;
 	card?: string;
 	text?: string;
 	border?: string;
-	notiCard?: string;
+	notification?: string;
 }
 
 export interface ColorsType extends ThemeColors {
@@ -15,4 +16,9 @@ export interface ColorsType extends ThemeColors {
 	inactiveTab: string;
 	dark: ThemeColors;
 	light: ThemeColors;
+}
+
+export interface ThemeType {
+	dark: boolean;
+	colors: ThemeColors;
 }

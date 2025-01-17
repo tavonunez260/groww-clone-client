@@ -1,6 +1,9 @@
-import { useTheme } from '@context';
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Button, StyleSheet } from 'react-native';
+
+import { CustomSafeAreaView } from '@components';
+import { CustomText } from '@components';
+import { useTheme } from '@context';
 
 export const HomeScreen = () => {
 	const { colorsState, setTheme } = useTheme();
@@ -9,16 +12,18 @@ export const HomeScreen = () => {
 	const textColor = colorsState.text;
 
 	return (
-		<View style={[styles.container, { backgroundColor }]}>
-			<Text style={[styles.text, { color: textColor }]}>
-				This is a {backgroundColor === '#121212' ? 'Dark' : 'Light'} themed screen!
-			</Text>
+		<CustomSafeAreaView>
+			<View style={[styles.container, { backgroundColor }]}>
+				<CustomText style={{ color: textColor }}>
+					This is a {backgroundColor === '#121212' ? 'Dark' : 'Light'} themed screen!
+				</CustomText>
 
-			<View style={styles.buttonContainer}>
-				<Button title="Switch to Light Theme" onPress={() => setTheme('light')} />
-				<Button title="Switch to Dark Theme" onPress={() => setTheme('dark')} />
+				<View style={styles.buttonContainer}>
+					<Button title="Switch to Light Theme" onPress={() => setTheme('light')} />
+					<Button title="Switch to Dark Theme" onPress={() => setTheme('dark')} />
+				</View>
 			</View>
-		</View>
+		</CustomSafeAreaView>
 	);
 };
 
@@ -31,11 +36,6 @@ const styles = StyleSheet.create({
 	container: {
 		alignItems: 'center',
 		flex: 1,
-		justifyContent: 'center',
-		padding: 20
-	},
-	text: {
-		fontSize: 18,
-		fontWeight: 'bold'
+		justifyContent: 'center'
 	}
 });

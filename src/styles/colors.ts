@@ -14,7 +14,7 @@ export const colors: ColorsType = {
 		text: '#FCFCFC',
 		// darkTextLight: '#FCFCFC',
 		border: '#484C56',
-		notiCard: '#1b1b1b'
+		notification: '#1b1b1b'
 	},
 	light: {
 		background: '#FFFFFF',
@@ -22,6 +22,6 @@ export const colors: ColorsType = {
 		text: '#454545',
 		// lightSubBackground: '#F8F8F8',
 		border: '#ccc',
-		notiCard: '#f8f8f8'
+		notification: '#f8f8f8'
 	}
 };
