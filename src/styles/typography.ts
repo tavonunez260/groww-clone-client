@@ -23,5 +23,3 @@ export const typography = {
 		latoThin: 'Lato-Thin'
 	}
 };
-
-export type TypographyType = typeof typography;

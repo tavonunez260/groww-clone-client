@@ -1,9 +1,10 @@
-import { typography } from '@styles';
-import { colors } from '@styles';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Appearance } from 'react-native';
+
+import { colors } from '@styles';
+import { typography } from '@styles';
 import { ColorsType } from '@types';
 
 interface ThemeContextType {
@@ -22,8 +23,26 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 	const [colorsState, setColorsState] = useState<ColorsType>(colors);
 	const [loaded, error] = useFonts({
 		'Roboto-Black': require('../assets/fonts/roboto/Roboto-Black.ttf'),
-		'Roboto-Bold': require('../assets/fonts/roboto/Roboto-Bold.ttf')
-		// Add all fonts here...
+		'Roboto-Bold': require('../assets/fonts/roboto/Roboto-Bold.ttf'),
+		'Roboto-ExtraBold': require('../assets/fonts/roboto/Roboto-ExtraBold.ttf'),
+		'Roboto-ExtraLight': require('../assets/fonts/roboto/Roboto-ExtraLight.ttf'),
+		'Roboto-Light': require('../assets/fonts/roboto/Roboto-Light.ttf'),
+		'Roboto-Medium': require('../assets/fonts/roboto/Roboto-Medium.ttf'),
+		'Roboto-Regular': require('../assets/fonts/roboto/Roboto-Regular.ttf'),
+		'Roboto-SemiBold': require('../assets/fonts/roboto/Roboto-SemiBold.ttf'),
+		'Roboto-Thin': require('../assets/fonts/roboto/Roboto-Thin.ttf'),
+		'Manrope-Bold': require('../assets/fonts/manrope/Manrope-Bold.ttf'),
+		'Manrope-ExtraBold': require('../assets/fonts/manrope/Manrope-ExtraBold.ttf'),
+		'Manrope-ExtraLight': require('../assets/fonts/manrope/Manrope-ExtraLight.ttf'),
+		'Manrope-Light': require('../assets/fonts/manrope/Manrope-Light.ttf'),
+		'Manrope-Medium': require('../assets/fonts/manrope/Manrope-Medium.ttf'),
+		'Manrope-Regular': require('../assets/fonts/manrope/Manrope-Regular.ttf'),
+		'Manrope-SemiBold': require('../assets/fonts/manrope/Manrope-SemiBold.ttf'),
+		'Lato-Black': require('../assets/fonts/lato/Lato-Black.ttf'),
+		'Lato-Bold': require('../assets/fonts/lato/Lato-Bold.ttf'),
+		'Lato-Light': require('../assets/fonts/lato/Lato-Light.ttf'),
+		'Lato-Regular': require('../assets/fonts/lato/Lato-Regular.ttf'),
+		'Lato-Thin': require('../assets/fonts/lato/Lato-Thin.ttf')
 	});
 
 	// Function to change theme
@@ -58,9 +77,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
 	useEffect(() => {
 		if (loaded || error) {
-			SplashScreen.hideAsync().then(() => {
-				console.log('Splash screen hidden');
-			});
+			SplashScreen.hideAsync().then();
 		}
 	}, [loaded, error]);
 

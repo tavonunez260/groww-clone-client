@@ -23,7 +23,7 @@ export enum FontSizeVariant {
 
 export interface CustomTextProps extends TextProps {
 	variant?: FontSizeVariant;
-	fontFamily?: keyof typeof typography.fontFamily;
+	fontFamily?: string;
 	fontSize?: number;
 	style?: StyleProp<TextStyle>;
 	children?: React.ReactNode;

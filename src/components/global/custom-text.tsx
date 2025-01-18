@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 
+import { useTheme } from '@context';
 import { typography } from '@styles';
 import { CustomTextProps, FontSizeVariant } from '@types';
 import { getFontSize } from '@utils';
@@ -14,12 +15,13 @@ export const CustomText: React.FC<CustomTextProps> = ({
 	...rest
 }) => {
 	const computedFontSize = getFontSize(variant, fontSize);
-
-	// Get the correct font family
-	const fontFamilyStyle = typography.fontFamily[fontFamily as keyof typeof typography.fontFamily];
+	const { colorsState } = useTheme();
 
 	return (
-		<Text style={[style, { fontFamily: fontFamilyStyle, fontSize: computedFontSize }]} {...rest}>
+		<Text
+			style={[style, { color: colorsState.text, fontFamily, fontSize: computedFontSize }]}
+			{...rest}
+		>
 			{children}
 		</Text>
 	);

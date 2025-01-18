@@ -26,7 +26,7 @@ export const Navigation = () => {
 
 	return (
 		<NavigationContainer ref={navigationRef} theme={myTheme}>
-			<Stack.Navigator>
+			<Stack.Navigator initialRouteName="LoginScreen">
 				<Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
 				<Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
 			</Stack.Navigator>
